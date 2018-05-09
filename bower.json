@@ -1,0 +1,10 @@
+{
+  "name": "ngJwt",
+  "version": "1.0.0",
+  "homepage": "hhttps://github.com/oliverGrisha/ngJwt",
+  "authors": "Oliver Lorenzo Felipe",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.6.10"
+  }
+}

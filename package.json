@@ -1,0 +1,26 @@
+{
+  "name": "ngjwt",
+  "version": "1.0.0",
+  "description": "A very basic module to manage JWT authentication.",
+  "main": "src/ngJwt.js",
+  "scripts": {
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliverGrisha/ngJwt.git"
+  },
+  "author": "Oliver Lorenzo Felipe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oliverGrisha/ngJwt.git/issues"
+  },
+  "homepage": "https://github.com/oliverGrisha/ngJwt.git#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^4.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3"
+  }
+}
