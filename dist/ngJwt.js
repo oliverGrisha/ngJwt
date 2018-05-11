@@ -1,6 +1,6 @@
 /**
 * ngJwt
-* @version v1.0.0
+* @version v1.0.1
 * @link https://github.com/oliverGrisha/ngJwt
 * @author Oliver Lorenzo Felipe
 * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -22,6 +22,7 @@ angular.module("ngJwt", [])
         return config;
       },
       'responseError': function(response) {
+        if (response.headers('Authorization')) ngJwtProvider.$get().setToken(response.headers('Authorization'));
         if (ngJwtProvider.defaults.errorCodes.indexOf(response.status) !== -1) {
           if (ngJwtProvider.defaults.removeTokenOnError) ngJwtProvider.$get().removeToken();
           $rootScope.$emit('$errorCode', response);
@@ -29,6 +30,7 @@ angular.module("ngJwt", [])
         return $q.reject(response);
       },
       'response': function(response) {
+        if (response.headers('Authorization')) ngJwtProvider.$get().setToken(response.headers('Authorization'));
         return response;
       }
     };
